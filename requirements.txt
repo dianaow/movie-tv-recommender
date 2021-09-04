@@ -2,3 +2,7 @@ numpy
 pandas
 scipy
 scikit-learn
+psycopg2
+sqlalchemy
+nltk
+scikit-learn

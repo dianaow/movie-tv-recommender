@@ -1,7 +1,10 @@
 .DS_Store
+.vscode
 .ipynb_checkpoints
 __pycache__
 data/*
 !data/raw-data/
 node_modules
 example.mov
+netflix-recommender-env
+package-lock.json
