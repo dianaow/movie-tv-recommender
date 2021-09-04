@@ -1,5 +1,5 @@
 // load all env variables from .env file into process.env object.
-require(‘dotenv’).config()
+require('dotenv').config()
 
 const express = require("express")
 const cors = require('cors')
@@ -11,11 +11,15 @@ const PORT = process.env.PORT || 8080
 
 const Pool = require('pg').Pool
 const pool = new Pool({
-  user: 'dianaow',
-  host: 'localhost',
-  database: 'test',
-  //password: 'password',
-  port: 5432,
+  // user: process.env.DB_USER,
+  // host: process.env.DB_HOST,
+  // password: process.env.DB_PASSWORD,
+  // database: process.env.DB,
+  // port: 5432,
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 })
 
 
