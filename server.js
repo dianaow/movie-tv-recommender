@@ -35,9 +35,9 @@ app.use(function (req, res, next) {
 
 app.get('/similarity', (req, res) => {
 
-  const title = req.query.title
+  const title = req.query.title.toLowerCase()
 
-  pool.query('SELECT * FROM results WHERE search_title = $1', [title], (error, results) => {
+  pool.query("SELECT * FROM results WHERE search_title ILIKE $1", [`%${title}%`], (error, results) => {
     if (error) {
       throw error
     }

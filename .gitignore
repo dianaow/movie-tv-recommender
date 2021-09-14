@@ -9,3 +9,5 @@ node_modules
 example.mov
 netflix-recommender-env
 package-lock.json
+model_1.ipynb
+model_2.ipynb
